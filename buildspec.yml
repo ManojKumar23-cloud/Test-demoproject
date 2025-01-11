@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+  pre_build:
+    commands:
+      - echo "Pre-build stage"
+  build:
+    commands:
+      - echo "Build stage - Packaging files"
+      - zip -r build.zip index.html style.css scripts/ AppSpec.yml
+artifacts:
+  files:
+    - build.zip
