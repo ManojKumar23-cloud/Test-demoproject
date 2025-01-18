@@ -13,4 +13,4 @@ phases:
       - zip -r build.zip index.html style.css scripts/ AppSpec.yml
 artifacts:
   files:
-    - build.zip
+    - '**/*'
